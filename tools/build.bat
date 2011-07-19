@@ -1,0 +1,1 @@
+java -jar jcoffeescript-1.1.jar < ../src/fixedheader.coffee > ../build/fixedheader.js
