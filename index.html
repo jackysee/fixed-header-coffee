@@ -4,29 +4,28 @@
   <meta charset='utf-8'>
 
   <title>jackysee/fixed-header-coffee @ GitHub</title>
+  
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.js"></script>
+	<link type="text/css" rel="stylesheet" href="fixedheader.css" />
+	<script type="text/javascript" src="fixedheader.js"></script>
 
   <style type="text/css">
-    body {
-      margin-top: 1.0em;
-      background-color: #368d2f;
-      font-family: Helvetica, Arial, FreeSans, san-serif;
-      color: #ffffff;
-    }
-    #container {
-      margin: 0 auto;
-      width: 700px;
-    }
-    h1 { font-size: 3.8em; color: #c972d0; margin-bottom: 3px; }
+    body { margin-top: 1.0em; background-color: #368d2f; font-family: Helvetica, Arial, FreeSans, san-serif; color: #ffffff; font-size:11px; }
+    #container { margin: 0 auto; width: 700px; }
+    h1 { font-size: 3.8em; color: white; margin-bottom: 3px; }
     h1 .small { font-size: 0.4em; }
     h1 a { text-decoration: none }
-    h2 { font-size: 1.5em; color: #c972d0; }
-    h3 { text-align: center; color: #c972d0; }
-    a { color: #c972d0; }
+    h2 { font-size: 1.5em; color: white; }
+    h3 { text-align: center; color: white; }
+    a { color: white; text-decoration:underline; }
     .description { font-size: 1.2em; margin-bottom: 30px; margin-top: 30px; font-style: italic;}
     .download { float: right; }
     pre { background: #000; color: #fff; padding: 15px;}
     hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
     .footer { text-align:center; padding-top:30px; font-style: italic; }
+
+	/*table style*/
+	#t td, #t th{border: 1px solid #ccc; margin:0; padding:5px;}
   </style>
 </head>
 
@@ -49,10 +48,54 @@
        jquery plugin for fixed table header, in coffeescript style
     </div>
 
-    <h2>Authors</h2>
-<p>jackysee (jackysee@gmail.com)<br/><br/>      </p>
-<h2>Contact</h2>
-<p>JackySee (jackysee@gmail.com)<br/>      </p>
+	<h2>Demo</h2>
+	<table id="t">
+			<thead>
+				<tr>
+					<th>Inv No</th>
+					<th>Date</th>
+					<th>Client</th>
+					<th>RecentLipsum Amount</th>
+					<th>Tax</th>
+					<th>Total</th>
+					<th>Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><td>1</td><td>2010-05-24</td><td>test</td><td>0.00</td><td>10.00</td><td>2111.00</td><td>note</td></tr>
+				<tr><td>2</td><td>2010-05-25</td><td>test2</td><td>0.00</td><td>20.00</td><td>320.00</td><td>note2</td></tr>
+				<tr><td>3</td><td>2007-09-01</td><td>test3</td><td>0.00</td><td>30.00</td><td>430.00</td><td>note3</td></tr>
+				<tr><td>4</td><td>2007-10-04</td><td>test</td><td>0.00</td><td>10.00</td><td>210.00</td><td>note</td></tr>
+				<tr><td>5</td><td>2007-10-05</td><td>test2</td><td>0.00</td><td>20.00</td><td>320.00</td><td>note2</td></tr>
+				<tr><td>6</td><td>2007-09-06</td><td>test3</td><td>0.00</td><td>30.00</td><td>430.00</td><td>note3</td></tr>
+				<tr><td>7</td><td>2007-10-04</td><td>test</td><td>0.00</td><td>10.00</td><td>210.00</td><td>note</td></tr>
+				<tr><td>8</td><td>2007-10-03</td><td>test2</td><td>0.00</td><td>21.00</td><td>320.00</td><td>note2</td></tr>
+				<tr><td>9</td><td>2007-09-01</td><td>test3</td><td>0.00</td><td>30.00</td><td>430.00</td><td>note3</td></tr>
+				<tr><td>11</td><td>2007-10-01</td><td>test</td><td>0.00</td><td>10.00</td><td>210.00</td><td>note</td></tr>
+				<tr><td>12</td><td>2007-10-02</td><td>test2</td><td>0.00</td><td>20.00</td><td>320.00</td><td>note2</td></tr>
+				<tr><td>13</td><td>2007-09-01</td><td>test3</td><td>0.00</td><td>30.00</td><td>430.00</td><td>note3</td></tr>
+				<tr><td>14</td><td>2007-10-04</td><td>test</td><td>0.00</td><td>10.00</td><td>210.00</td><td>note</td></tr>
+				<tr><td>15</td><td>2007-10-05</td><td>test2</td><td>0.00</td><td>20.00</td><td>320.00</td><td>note2</td></tr>
+				<tr><td>16</td><td>2007-09-06</td><td>test3</td><td>0.00</td><td>30.00</td><td>430.00</td><td>note3</td></tr>
+				<tr><td>17</td><td>2007-10-04</td><td>test</td><td>0.00</td><td>10.00</td><td>210.00</td><td>note</td></tr>
+				<tr><td>18</td><td>2007-10-03</td><td>test2</td><td>0.00</td><td>20.00</td><td>320.00</td><td>note2</td></tr>
+				<tr><td>19</td><td>2007-09-01</td><td>test3</td><td>0.00</td><td>30.00</td><td>430.00</td><td>note3</td></tr>
+				<tr><td>21</td><td>2007-10-01</td><td>test</td><td>0.00</td><td>10.00</td><td>210.00</td><td>note</td></tr>
+				<tr><td>22</td><td>2007-10-02</td><td>test2</td><td>0.00</td><td>20.00</td><td>320.00</td><td>note2</td></tr>
+				<tr><td>23</td><td>2007-09-01</td><td>test3</td><td>0.00</td><td>30.00</td><td>430.00</td><td>note3</td></tr>
+				<tr><td>24</td><td>2007-10-04</td><td>test</td><td>0.00</td><td>10.00</td><td>210.00</td><td>note</td></tr>
+				<tr><td>25</td><td>2007-10-05</td><td>test2</td><td>0.00</td><td>20.00</td><td>320.00</td><td>note2</td></tr>
+				<tr><td>26</td><td>2007-09-06</td><td>test3</td><td>0.00</td><td>30.00</td><td>430.00</td><td>note3</td></tr>
+				<tr><td>27</td><td>2007-10-04</td><td>test</td><td>0.00</td><td>10.00</td><td>210.00</td><td>note</td></tr>
+				<tr><td>28</td><td>2007-10-03</td><td>test2</td><td>0.00</td><td>20.00</td><td>320.00</td><td>note2</td></tr>
+				<tr><td>29</td><td>2007-09-01</td><td>test3</td><td>0.00</td><td>30.00</td><td>430.00</td><td>note3</td></tr>
+			</tbody>
+		</table>
+		<script>
+			$(function(){
+				$("#t").fixedHeader({width:400, height:300});
+			});
+		</script>
 
 
     <h2>Download</h2>

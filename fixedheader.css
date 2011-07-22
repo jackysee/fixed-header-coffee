@@ -1,0 +1,12 @@
+.fh-wrapper{position:relative}
+.fh-wrap table{border-collapse:collapse !important;}
+.fh-header {overflow: hidden}
+.fh-header table{table-layout:fixed; border-collapse: collapse;}
+.fh-header table th{border:1px solid #ccc;padding:0; margin:0;}
+.fh-header table th div{overflow:hidden}
+.fh-body {overflow: auto;}
+.fh-body .fh-body-prerow{height:0px; padding-top:0; padding-bottom:0;}
+.fh-body .fh-body-prerow td{height:0 !important;border-top:none!important; border-bottom:none!important;margin-top:0 !important; margin-bottom:0!important; padding-top:0!important; padding-bottom:0!important;}
+.fh-body .fh-body-prerow div{height:0; margin:0; padding:0;}
+.fh-body .fh-body-firstrow td{border-top:none !important}
+
