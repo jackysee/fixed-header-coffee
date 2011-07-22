@@ -12,14 +12,16 @@
       this.body.bind('scroll', this.scroll);
     }
     FixedHeader.prototype.createWrappers = function() {
-      var table;
-      table = $(this);
+      var id;
+      id = this.table.attr('id');
       this.wrapper = $("<div/>", {
+        id: "" + id + "wrapper",
         "class": "fh-wrap",
         width: this.option.width,
         height: this.option.height
       });
       this.header = $("<div/>", {
+        id: "" + id + "header",
         "class": "fh-header"
       });
       this.body = $("<div/>", {

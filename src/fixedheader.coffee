@@ -7,9 +7,9 @@ class FixedHeader
 		@body.bind 'scroll', @scroll
 	
 	createWrappers: ->
-		table = $(@)
-		@wrapper = $ "<div/>", {class:"fh-wrap", width: @option.width, height: @option.height}
-		@header = $ "<div/>", {class: "fh-header"}
+		id = @table.attr 'id'
+		@wrapper = $ "<div/>", {id:"#{id}wrapper",class:"fh-wrap", width: @option.width, height: @option.height}
+		@header = $ "<div/>", {id:"#{id}header",class: "fh-header"}
 		@body = $ "<div/>", {class: "fh-body", width:@option.width}
 		
 		@table.wrap @wrapper 
@@ -58,7 +58,6 @@ class FixedHeader
 			@scrollbarWidth = child.innerWidth() - child.height( 99 ).innerWidth();
 			parent.remove();
 		@scrollbarWidth
-		
 
 #plugin bridge
 $.plugin = (name, object)->
